@@ -1,6 +1,5 @@
 # =============================================
 # M1Z2
-
 # zmienne
 liczba1 = 20
 liczba2 = 30
@@ -28,7 +27,7 @@ print("Dzielenie całkowite")
 print(str(liczba1) + " : " + str(liczba2) + " = " + str(dzielenieCalkowite1))
 print(str(liczba2) + " : " + str(liczba1) + " = " + str(dzielenieCalkowite2))
 
-# =============================================
-
 # Dzielenie rzeczywiste robimy jednym znakiem "/"
 # Dzielenie całkowite wykonujemy dwoma znakami "//"
+
+# =============================================
