@@ -2,8 +2,8 @@
 # M1Z5
 
 zmienna01 = 5E-1
-zmienna02 = (3==3)/2
-zmienna03 = (3==3)/2.0
+zmienna02 = (3 == 3)/2
+zmienna03 = (3 == 3)/2.0
 zmienna04 = 1/2
 zmienna05 = float(1)/2
 zmienna06 = 5.
