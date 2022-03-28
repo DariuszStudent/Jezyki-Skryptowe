@@ -7,5 +7,4 @@ km = int(input())
 mile = km * PRZELICZNIK
 print("Wynik", km, "km to:", round(mile, 2), "mil")
 
-
 # =============================================
