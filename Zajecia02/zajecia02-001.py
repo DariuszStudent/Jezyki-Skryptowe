@@ -15,4 +15,7 @@ except:
     print("Nie podałeś liczby całkowitej, tylko: {}"
           "\n Koniec programu".format(userNumber))
 
+# instrukcja  if userNumber == 0: wykona się zawsze, jeśli jest prawidłowa inne instrukcje się nie wykonają
+# wynika to z tego, że program działa kaskadowo, jeśli pierwsza operacja jest poprawna kolejne
+# pomija czyli elif i else
 # =============================================
