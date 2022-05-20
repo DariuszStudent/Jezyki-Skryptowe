@@ -1,21 +1,23 @@
 # =============================================
-# M2Z00
+# M2Z01
 
-print("Jeśli liczba jest większa od zera program wyświetli TAK, jeśli nie wyświetli NIE")
-userNumber = input("Podaj liczbę: ")
+print("Podaj swój wiek, program sprawdzi ile brakuje ci do 100 lat i czy jesteś pełnoletni")
+userNumber = input("Podaj swój wiek: ")
 try:
     userNumber = int(userNumber)
-    if userNumber == 0:
-        print("Podana liczba jest równa 0")
-    elif userNumber > 0:
-        print("Podana liczba jest większa od zera")
+    missingYears = 100 - userNumber
+    if missingYears > 0:
+        print("Do 100 lat brakuje Ci: {}".format(missingYears))
+    elif missingYears == 0:
+        print("Masz równo 100 lat")
     else:
-        print("Liczba jest mniejsza od zera")
+        print("Masz ponad 100 lat czyli: {}".format(userNumber))
+    if userNumber >= 18:
+        print("PEŁNOLETNI")
+    else:
+        print("MŁODOCIANY")
 except:
     print("Nie podałeś liczby całkowitej, tylko: {}"
           "\n Koniec programu".format(userNumber))
 
-# instrukcja  if userNumber == 0: wykona się zawsze, jeśli jest prawidłowa inne instrukcje się nie wykonają
-# wynika to z tego, że program działa kaskadowo, jeśli pierwsza operacja jest poprawna kolejne
-# pomija czyli elif i else
 # =============================================
