@@ -12,11 +12,11 @@ for i in range(1, 31, 2):
 print("\n\nPodzielne przez 3")
 
 for i in range(1, 50):
-    if (i % 3 == 0):
+    if i % 3 == 0:
         print(i, end=",")
 
 print("\n\nLista")
-lista = [1,2,3,6,3,7,9,2]
+lista = [1, 2, 3, 6, 3, 7, 9, 2]
 print(lista)
 
 print("\nFor przez liste")

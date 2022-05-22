@@ -2,32 +2,32 @@
 # M2Z02
 import Helpers as helpers
 
-WIEK_K = 60
-WIEK_M = 65
+wikK = 60
+wiekMan = 65
 
 imie = input("Podaj imię: ")
 
 plec = ''
-while (plec != 'K' and plec != 'M'):
+while plec != 'K' and plec != 'M':
     plec = input("Podaj płeć [m/k]: ")
     plec = plec.upper()
-    if (plec != 'M' and plec != 'K'):
+    if plec != 'M' and plec != 'K':
         print("Błąd, podaj płeć ponownie")
 
-exit = False
-while (exit == False):
+exitWhile = False
+while not exitWhile:
     userVar = input("Podaj liczbę: ")
-    wiek, exit = helpers.userVariableINT(userVar)
+    wiek, exitWhile = helpers.userVariableINT(userVar)
 
-print("Twoje imię",imie,"wiek",wiek,"plec",plec)
+print("Twoje imię", imie, "wiek", wiek, "plec", plec)
 
-if (plec == 'K'):
-    if (wiek >= 60):
+if plec != 'K':
+    if wiek >= 65:
         print("Emerytura")
     else:
         print("ZUS")
 else:
-    if (wiek >= 65):
+    if wiek >= 60:
         print("Emerytura")
     else:
         print("ZUS")

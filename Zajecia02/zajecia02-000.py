@@ -4,10 +4,10 @@ import Helpers as helpers
 
 print("Jeśli liczba jest większa od zera program wyświetli TAK, jeśli nie wyświetli NIE")
 
-exit = False
-while (exit == False):
+exitWhile = False
+while not exitWhile:
     userVar = input("Podaj liczbę: ")
-    userNumber, exit = helpers.userVariableINT(userVar)
+    userNumber, exitWhile = helpers.userVariableINT(userVar)
 
 if userNumber == 0:
     print("Podana liczba jest równa 0")

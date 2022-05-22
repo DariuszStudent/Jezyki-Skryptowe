@@ -4,10 +4,10 @@ import Helpers as helpers
 
 print("Podaj swój wiek, program sprawdzi ile brakuje ci do 100 lat i czy jesteś pełnoletni")
 
-exit = False
-while (exit == False):
+exitWhile = False
+while not exitWhile:
     userVar = input("Podaj liczbę: ")
-    userNumber, exit = helpers.userVariableINT(userVar)
+    userNumber, exitWhile = helpers.userVariableINT(userVar)
 
 
 missingYears = 100 - userNumber
