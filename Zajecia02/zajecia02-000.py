@@ -6,12 +6,12 @@ print("Jeśli liczba jest większa od zera program wyświetli TAK, jeśli nie wy
 
 exit = False
 while (exit == False):
-    userNumber = input("Podaj liczbę: ")
-    userVar, exit = helpers.userVariableINT(userNumber)
+    userVar = input("Podaj liczbę: ")
+    userNumber, exit = helpers.userVariableINT(userVar)
 
-if userVar == 0:
+if userNumber == 0:
     print("Podana liczba jest równa 0")
-elif userVar > 0:
+elif userNumber > 0:
     print("Podana liczba jest większa od zera")
 else:
     print("Liczba jest mniejsza od zera")
