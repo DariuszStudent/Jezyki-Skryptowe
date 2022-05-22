@@ -9,15 +9,15 @@ while (exit == False):
     userNumber = input("Podaj liczbę: ")
     userVar, exit = helpers.userVariableINT(userNumber)
 
-userNumber = int(userNumber)
-missingYears = 100 - userNumber
+
+missingYears = 100 - userVar
 if missingYears > 0:
     print("Do 100 lat brakuje Ci: {}".format(missingYears))
 elif missingYears == 0:
     print("Masz równo 100 lat")
 else:
-    print("Masz ponad 100 lat czyli: {}".format(userNumber))
-if userNumber >= 18:
+    print("Masz ponad 100 lat czyli: {}".format(userVar))
+if userVar >= 18:
     print("PEŁNOLETNI")
 else:
     print("MŁODOCIANY")
