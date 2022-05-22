@@ -1,5 +1,6 @@
 # =============================================
 # M2Z02
+import Helpers as helpers
 
 WIEK_K = 60
 WIEK_M = 65
@@ -12,13 +13,13 @@ while (plec != 'K' and plec != 'M'):
     plec = plec.upper()
     if (plec != 'M' and plec != 'K'):
         print("Błąd, podaj płeć ponownie")
-try:
-    wiek = int(input("Podaj wiek: "))
-except ValueError:
-    print("Błędny wiek:")
-    exit(0)
-else:
-    print("Twoje imię",imie,"wiek",wiek,"plec",plec)
+
+exit = False
+while (exit == False):
+    userVar = input("Podaj liczbę: ")
+    wiek, exit = helpers.userVariableINT(userVar)
+
+print("Twoje imię",imie,"wiek",wiek,"plec",plec)
 
 if (plec == 'K'):
     if (wiek >= 60):

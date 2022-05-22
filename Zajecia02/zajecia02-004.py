@@ -8,8 +8,9 @@ while (licznik > 0):
     licznik += -1
     #if (licznik == 3):
     #    break
-    if (licznik < 6):
+    if (licznik < 7):
         continue
-    print("licznik < 5")
+    print("Koniec ciała pętli")
+
 
 # =============================================
