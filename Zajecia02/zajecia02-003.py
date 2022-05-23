@@ -23,7 +23,7 @@ print("\nFor przez liste")
 for i in lista:
     print(i, end=',')
 
-print("\n\n -1 skok <20:0>")
+print("\n\n -1 skok <20:0> range(20, -1, -1)")
 lista = [1, 2, 3, 6, 3, 7, 9, 2]
 for i in range(20, -1, -1):
     print(i, end=',')
