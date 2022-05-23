@@ -32,6 +32,7 @@ while not exitWhile:
             print("Emerytura")
         else:
             print("ZUS")
+
     helpers.exitProgram()
     exitWhile = False
 

@@ -18,6 +18,7 @@ while not exitWhile:
         print("Podana liczba jest większa od zera")
     else:
         print("Liczba jest mniejsza od zera")
+
     helpers.exitProgram()
     exitWhile = False
 

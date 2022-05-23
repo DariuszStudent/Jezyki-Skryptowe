@@ -13,11 +13,12 @@ while not exitWhile:
     while licznik > 0:
         print("licznik = ", licznik)
         licznik += -1
-        # if (licznik == 3):
+        # if licznik == 3:
         #    break
-        if (licznik < 7):
+        if licznik < 7:
             continue
         print("Koniec ciała pętli")
+
     helpers.exitProgram()
     exitWhile = False
 

@@ -2,6 +2,7 @@
 # M2Z01
 import Helpers as helpers
 
+sto = 100
 exitWhile = False
 while not exitWhile:
     print("################################################################################\n")
@@ -10,7 +11,7 @@ while not exitWhile:
         userVar = input("Podaj liczbę: ")
         userNumber, exitWhile = helpers.userVariableINT(userVar)
 
-    missingYears = 100 - userNumber
+    missingYears = sto - userNumber
     if missingYears > 0:
         print("Do 100 lat brakuje Ci: {}".format(missingYears))
     elif missingYears == 0:
@@ -22,8 +23,6 @@ while not exitWhile:
     else:
         print("MŁODOCIANY")
 
-    print("Nie podałeś liczby całkowitej, tylko: {}"
-          "\n Koniec programu".format(userNumber))
     helpers.exitProgram()
     exitWhile = False
 
