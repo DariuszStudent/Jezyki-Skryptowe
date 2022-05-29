@@ -3,6 +3,7 @@ def exitProgram():
     if exit == 'Q' or exit == 'EXIT':
         quit()
 
+
 def userVariableINT(userInput):
     try:
         user = int(userInput)
@@ -11,6 +12,7 @@ def userVariableINT(userInput):
         print("Typ błędu: ", e)
         exitProgram()
         return False, False
+
 
 def userVariableFloat(usernInput):
     try:
