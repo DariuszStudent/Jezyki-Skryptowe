@@ -6,10 +6,8 @@ exitWhile = False
 while not exitWhile:
     print("################################################################################\n")
     while not exitWhile:
-        userVar = input("Podaj wysokość (musi być to liczba parzysta, jeśli nie będzie dodam 1): ")
+        userVar = input("Podaj wysokość: ")
         ile, exitWhile = helpers.userVariableINT(userVar)
-    if ile % 2 != 0:
-        ile += 1
 
     for i in range(0, ile):
         for j in range(0, ile - i - 1):
