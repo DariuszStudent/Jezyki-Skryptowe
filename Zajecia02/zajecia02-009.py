@@ -13,15 +13,15 @@ while not exitWhile:
             print(e)
             helpers.exitProgram()
             continue
-        userNumber1, exitWhile = helpers.userVariableFloat(userVar1)
+        intervalFirst, exitWhile = helpers.userVariableFloat(userVar1)
         if not exitWhile:
             continue
-        userNumber2, exitWhile = helpers.userVariableFloat(userVar2)
+        intervalLast, exitWhile = helpers.userVariableFloat(userVar2)
         if not exitWhile:
             continue
         userNumber3, exitWhile = helpers.userVariableFloat(userVar3)
 
-    lista = [userNumber1, userNumber2, userNumber3]
+    lista = [intervalFirst, intervalLast, userNumber3]
     print("Najmniejsza podana liczba to: {:.2f}".format(min(lista)))
 
     helpers.exitProgram()

@@ -1,29 +1,49 @@
 # =============================================
 # M2Z15
+import Helpers as helpers
 import random as rnd
 
-try:
-    lewy = int(input("Podaj początek przedziału: "))
-    prawy = int(input("Podaj koniec przedziału: "))
-except Exception as e:
-    print(e)
-    print("Błędne dane")
-    exit(0)
+exitWhile = False
+while not exitWhile:
+    print("################################################################################\n")
+    while not exitWhile:
+        userVar = input("Podaj początek przedziału, musi być dodatnia: ")
+        intervalFirst, exitWhile = helpers.userVariableINT(userVar)
+    exitWhile = False
+    while not exitWhile:
+        userVar = input("Podaj koniec przedziału: ")
+        intervalLast, exitWhile = helpers.userVariableINT(userVar)
+    if intervalFirst > intervalLast or intervalFirst < 0:
+        print("Podane wartości są błędne, pierwsza liczba musi być dodatnia i mniejsza od drugiej liczby.")
+        helpers.exitProgram()
+        exitWhile = False
+        continue
 
-liczba_pseudo_losowa = rnd.randrange(lewy, prawy + 1)
-liczba_podana = -1
-licznik = 1
+    pseudoNumber = rnd.randrange(intervalFirst, intervalLast + 1)
+    userNumber = -1
+    counter = 1
 
-while (liczba_podana != liczba_pseudo_losowa):
-    liczba_podana = int(input("Zgadnij liczbę: "))
-    if (liczba_podana == liczba_pseudo_losowa):
-        print("TAK! Ilość prób", licznik)
-    else:
-        if (liczba_podana > liczba_pseudo_losowa):
-            print("Za dużo")
-        elif (liczba_podana < liczba_pseudo_losowa):
-            print("Za mało")
-        licznik += 1
+    while userNumber != pseudoNumber:
+        exitWhile = False
+        while not exitWhile:
+            print("Podany zakres to: <{} : {}>".format(intervalFirst, intervalLast))
+            userVar = input("Zgadnij Liczbę: ")
+            userNumber, exitWhile = helpers.userVariableINT(userVar)
+            if userNumber < intervalFirst or userNumber > intervalLast:
+                print("Liczba jest z poza zakresu, spróbuj jeszcze raz")
+                exitWhile = False
+        if userNumber == pseudoNumber:
+            print("TAK! Ilość prób", counter)
+        else:
+            if userNumber > pseudoNumber:
+                print("Za dużo")
+                intervalLast = userNumber - 1
+            elif userNumber < pseudoNumber:
+                print("Za mało")
+                intervalFirst = userNumber + 1
+            counter += 1
 
+    helpers.exitProgram()
+    exitWhile = False
 
 # =============================================
