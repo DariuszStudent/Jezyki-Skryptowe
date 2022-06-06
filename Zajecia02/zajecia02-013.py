@@ -1,15 +1,24 @@
 # =============================================
 # M2Z13
 
-liczba_d = 0
-liczba_b = "01111111"
+import Helpers as helpers
 
-i = len(liczba_b) - 1
+exitWhile = False
+while not exitWhile:
+    number = 0
+    print("################################################################################\n")
+    while not exitWhile:
+        userVar = input("Podaj liczbę binarną: ")
+        userNumber, exitWhile = helpers.userVariableZeroOne(userVar)
 
-for cyfra in liczba_b:
-    liczba_d = liczba_d + (int(cyfra) * pow(2, i))
-    i = i - 1
+    cyfra = len(userNumber) - 1
+    for i in userNumber:
+        number = number + (int(i) * pow(2, cyfra))
+        cyfra = cyfra - 1
 
-print(liczba_d)
+    print(number)
+
+    helpers.exitProgram()
+    exitWhile = False
 
 # =============================================

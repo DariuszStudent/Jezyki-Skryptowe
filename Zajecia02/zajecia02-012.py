@@ -1,16 +1,23 @@
 # =============================================
 # M2Z12
+import Helpers as helpers
 
-liczba_d = 5
-liczba_b = ""
+exitWhile = False
+while not exitWhile:
+    number = ""
+    print("################################################################################\n")
+    while not exitWhile:
+        userVar = input("Podaj liczbę, program przetworzy jej wartość z dziesiętnych na binarny: ")
+        userNumber, exitWhile = helpers.userVariableINT(userVar)
 
-while (liczba_d != 0 ):
-    r = liczba_d % 2
-    #print(r, end='')
-    liczba_b = str(r) + liczba_b
-    liczba_d //= 2
+    while userNumber != 0:
+        r = userNumber % 2
+        number = str(r) + number
+        userNumber //= 2
 
-print(liczba_b)
+    print(number)
 
-#zera wiodące!
+    helpers.exitProgram()
+    exitWhile = False
+
 # =============================================
