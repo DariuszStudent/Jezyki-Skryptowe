@@ -26,11 +26,23 @@ def userVariableZeroOne(userInput):
     return userInput, True
 
 
-def userVariableFloat(usernInput):
+def userVariableFloat(userInput):
     try:
-        user = float(usernInput)
+        user = float(userInput)
         return user, True
     except Exception as e:
         print("Typ błędu: ", e)
+        exitProgram()
+        return False, False
+
+
+def userVariableROQ(userInput):
+    userVar = userInput[0]
+    if userVar == "o" or userVar == "r":
+        return userVar, True
+    elif userVar == "q":
+        quit()
+    else:
+        print("Zostały podane złe dane")
         exitProgram()
         return False, False
