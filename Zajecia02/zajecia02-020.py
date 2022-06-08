@@ -1,17 +1,10 @@
 # =============================================
 # M2Z020
 import turtle as t
+import Helpers as helpers
 
-t.penup()
-t.goto(-100, 0)
-t.pendown()
-t.forward(200)
-t.penup()
-t.goto(0, 100)
+helpers.turtleXY(200)
 t.right(90)
-t.pendown()
-t.forward(200)
-t.penup()
 t.goto(-100, 0)
 t.pendown()
 t.circle(100)

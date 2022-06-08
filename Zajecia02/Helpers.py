@@ -1,3 +1,6 @@
+import turtle as t
+
+
 def exitProgram():
     exit = input("\nWciśnij enter aby kontynuować lub wpisz [Q] [exit], aby wyjść z programu: ").upper()
     if exit == 'Q' or exit == 'EXIT':
@@ -46,3 +49,19 @@ def userVariableROQ(userInput):
         print("Zostały podane złe dane")
         exitProgram()
         return False, False
+
+
+def turtleXY(lenght):
+    t.speed(1000)
+    t.penup()
+    t.goto(-lenght//2, 0)
+    t.pendown()
+    t.forward(lenght)
+    t.penup()
+    t.goto(0, lenght//2)
+    t.right(90)
+    t.pendown()
+    t.forward(lenght)
+    t.penup()
+    t.left(90)
+    t.speed(10)
