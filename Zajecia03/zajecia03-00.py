@@ -1,113 +1,112 @@
-imiona = ["Jaga", "Agata", "Jas", "Malgosia"]
-l1 = list()
-l2 = []
+# =============================================
+# M3Z00
 
-print(imiona)
-print(imiona[0])
-print("\nod elementu do elementu co 2")
+print("\nLista składająca się z kilku typów danych")
+x = 3
+nowa_lista = [1, 'dwa', 3.45, x]
+print(nowa_lista)
 
+print("\nLista może też być pusta (pusty zbiór elementów)")
+pusta_lista = []
+print(pusta_lista)
 
-imiona.append("Janusz")
-imiona.append("Grażyna")
-imiona.append("Sławuś")
-imiona.append("Szwagier")
+moja_lista = [1, 2, 3, 4, 5]
 
-print(imiona[1:6:2])
-print(imiona[:6])
-print(imiona[3:])
+print("\nWywołanie elementu listy za pomocą indeksu")
+print(moja_lista[1])  # zwróci nam wartość drugiego elementu listy, czyli tutaj liczba 2
+print(moja_lista[3])  # = 4
+try:
+    moja_lista[10]  # Indeks poza zakresem listy, Python zwróci tutaj błąd: 'IndexError: list index out of range'
+except Exception as e:
+    print("moja_lista[10], indeks poza zakresem")
+    print(e)
 
-print("\n pętla")
-for i in imiona:
-    print(i, end=' ')
+print("\nMożemy też wywołać element listy licząc ostatniego elementu")
+print(moja_lista[-1])  # = 5
+print(moja_lista[-2])  # = 4
 
-imiona.sort()
-print("\n posortowana")
-for i in imiona:
-    print(i, end=' ')
-imie = imiona.pop()
-print(imie)
-print(imiona)
-imiona.insert(1, "Edzio")
-print(imiona)
-print(imiona.count("Jaga"))
-imiona.remove("Jaga")
+print("\nWycinanie ('slicing') wybranego ciągu elementów z listy")
+print(moja_lista[1:])  # Dostaniemy tutaj listę składającą się z czterech elementów [2,3,4,5]
+print(moja_lista[1:3])  # Fragment listy obejmujący elementy od drugiego do trzeciego [2,3]
 
-l1 = [1,2,3,4]
-l2 = [100,200,300,400]
-l3 = l1+l2
-print(l3)
+# =============================================== łączenie list
+print("\nłączenie list")
+print(moja_lista + ['nowy element'])  # dostaniemy [1,2,3,'nowy element']
+print(moja_lista + [4, 5])  # = [1,2,3,4,5]
 
-print(len(imiona))
-del imiona[:2]
-print(imiona)
+lista2 = ['a', 'b', 'c']
+print(moja_lista + lista2)  # = [1,2,3,'a','b','c']
 
-#l1 = l2
-#print(l1)
-#print(l2)
-#
-#l2[0] = 133
-#print(l1)
-#print(l2)
+print("\nPrzypisanie na nowo zawartości listy")
+moja_lista = moja_lista + ['dodaj element na stale']
+print(moja_lista)
 
-l1 = l2[:]
-print(l1)
-print(l2)
+# ================================================== Powielanie list
 
-l2[0] = 333
-print(l1)
-print(l2)
+print("\nPowielanie listy * 3")
+moja_lista * 3
+print(moja_lista)
+print(moja_lista * 3)
 
-l4 = list(range(0, 100))
-print(l4)
+# ================================================== Zastępowanie elementu listy
 
-# ===================
-k1 = ("Janusz", "Agata", [1, 2, 3])
-print(k1)
-print(k1[0])
-print(k1.index("Agata"))
+print("\nZastępowanie elementu listy")
+moja_lista[0] = 'zastap element'
+print(moja_lista)
 
-l2[1] = (1, 2, 3)
-print(l2)
+# ================================================== Dodawanie elementów do listy
 
-k1[2][0] = 20
-print(k1)
+moja_lista = [1, 2, 3]
 
-k1[2].append(11)
-print(k1)
-k2 = (100,200,300)
+print("\nDługość listy (liczba elementów) [1, 2, 3]")
+len(moja_lista)
 
-# zbior
-x = set()
-x.add("janusz")
-x.add("agata")
-x.add("zbigniew")
-x.add(1)
-x.add(3)
-x.add(1)
-x.add(6)
-print(x)
-x.add(k2)
-print(x)
-print(x)
-print(x)
-#x.remove(500) #blad nie ma elementów
-#x.discard(500) #brak błędó
-x = {1, 2, 3, 4, 5}
-y = {100, 200, 300, 400}
-z = x.union(y)
-print(z)
+print("\nDodawanie elementów do listy")
+moja_lista.append('dodaj element')  # Dodawanie elementu na koniec listy
+print(moja_lista)
 
-x = {1, 2, 3, 4, 5, 400}
-y = {100, 200, 300, 400}
-z = x.difference(y)
-print(z)
-z = x.intersection(y)
-print(z)
+moja_lista.insert(1, 'dodaj drugi element')  # Dodawanie elementu w miejsce o indeksie 1
+print(moja_lista)
 
-l = [8, 9, 10]
-l.append(z)
-print(l)
+# =============================================     Usuwanie elementów z listy
 
-l = [8, 9, 10]
-l.extend(z)
-print(l)
+nowa_lista = ['a', 'b', 'c', 'a']
+print("\n", nowa_lista)
+print("Usuwanie elementu listy za pomocą .pop()")
+nowa_lista.pop()  # Usunięcie ostatniego elementu listy (odwrotność funkcji .append())
+nowa_lista.pop(0)  # Usunięcie z listy elementu o indeksie 0
+print(nowa_lista)
+
+print("Usuwanie elementu listy za pomocą .remove()")
+nowa_lista = ['a', 'b', 'c', 'a']
+nowa_lista.remove('a')  # Usunięcie z listy pierwszego wystąpienia zmiennej 'a'
+print(nowa_lista)
+
+# ==============================================      Przeszukiwanie listy
+
+nowa_lista = ['a', 'b', 'c', 'a']
+print("\n", nowa_lista)
+print("Przeszukiwanie listy")
+
+print('a' in nowa_lista)  # Prawda (True) jeśli element występuje w liście, w przeciwnym przypadku fałsz (False)
+print(nowa_lista.index('a'))  # Zwraca indeks pierwszego wystąpienia szukanego elementu w liście
+print(nowa_lista.index('a', 1, 10))  # Jak wyżej tylko przeszukuje listę w zakresie indeksów od 1 do 10
+
+print(nowa_lista.count('a'))    # Zwraca liczbę wystąpień elementu listy
+print(max(nowa_lista))         # Zwraca największy element listy
+print(min(nowa_lista))         # Najmniejszy element listy
+
+# ===============================================       Modyfikowanbie kolejności elementów w liście
+
+print("\nModyfikowanbie kolejności elementów w liście")
+nowa_lista = ['a', 'b', 'c', 'a']
+
+# Odwracanie kolejności listy
+nowa_lista.reverse()
+print(nowa_lista)
+
+# Sortowanie elementów listy
+nowa_lista.sort()
+print(nowa_lista)
+
+# ==================================================================================
