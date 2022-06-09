@@ -1,5 +1,5 @@
 # =============================================
-# M3Z00b
+# M3Z00a
 
 print("\nTworzenie krotki (tuple)")
 tup = ('jeden', 'dwa', 'trzy')
