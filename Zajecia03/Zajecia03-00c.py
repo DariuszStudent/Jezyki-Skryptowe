@@ -42,6 +42,6 @@ for i in listaDwyWymiar:
     print()
 
 print(listaDwyWymiar[1])
-
+print(listaDwyWymiar[3][::3])
 
 # =============================================
