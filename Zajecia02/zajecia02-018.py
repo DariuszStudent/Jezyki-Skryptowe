@@ -6,12 +6,9 @@ import random as rnd
 user = 0
 computer = 0
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Określ ilość rzutów kostką, wpisz liczbę: ")
-        userInput, exitWhile = helpers.userVariableINT(userVar)
+    userInput = helpers.userVariableIntNEW("Określ ilość rzutów kostką, wpisz liczbę: ")
     oczek1 = oczek2 = oczek3 = oczek4 = oczek5 = oczek6 = 0
 
     for i in range(1, userInput + 1):
@@ -38,9 +35,6 @@ while not exitWhile:
     print("Oczek:  5 ilość: {:>2}".format(oczek5))
     print("Oczek:  6 ilość: {:>2}".format(oczek6))
 
-
-
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

@@ -2,8 +2,7 @@
 # M2Z05
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     e = -1
     licznik = 1
     suma = srednia = 0
@@ -13,12 +12,12 @@ while not exitWhile:
     print("Podaj liczby całkowite, 0 kończy.")
 
     while e != 0:
-        while not exitWhile:
-            print("Podaj element nr", licznik, ": ", end='')
-            userVar = input()
-            e, exitWhile = helpers.userVariableINT(userVar)
+        print("Licznik: ", licznik)
+        e = helpers.userVariableINT("Podaj element nr: ")
         if e == 0:
             licznik -= 1
+            if licznik == 0:
+                quit()
             break
         if e != 0:
             suma += e
@@ -37,6 +36,5 @@ while not exitWhile:
     print("Maksimum: {0:4d}, Minimum: {1:4d}".format(maximum, minimum))
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

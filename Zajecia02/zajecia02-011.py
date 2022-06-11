@@ -3,12 +3,10 @@
 import Helpers as helpers
 
 znak = ' . '
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj dlugosc macierzy kwadratowej <int>x<int>: ")
-        ilosc, exitWhile = helpers.userVariableINT(userVar)
+
+    ilosc = helpers.userVariableIntNEW("Podaj dlugosc macierzy kwadratowej <int>x<int>: ")
     userInput = input("Podaj znak, który chcesz użyć jako przekątna "
                         "(program przechwyci tylko pierwszy znak): ")
     znakUser = userInput[0]
@@ -32,6 +30,5 @@ while not exitWhile:
         print()
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

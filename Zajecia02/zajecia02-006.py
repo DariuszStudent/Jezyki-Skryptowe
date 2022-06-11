@@ -2,12 +2,9 @@
 # M2Z06
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Ilosc znakow: ")
-        ile, exitWhile = helpers.userVariableINT(userVar)
+    ile = helpers.userVariableINT("Ilosc znakow: ")
 
     for i in range(1, ile+1):
         for j in range(0, i):
@@ -15,6 +12,5 @@ while not exitWhile:
         print()
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

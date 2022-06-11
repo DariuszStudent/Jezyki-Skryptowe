@@ -5,8 +5,7 @@ import Helpers as helpers
 wikK = 60
 wiekMan = 65
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
     imie = input("Podaj imię: ")
     plec = ''
@@ -16,9 +15,7 @@ while not exitWhile:
         if plec != 'M' and plec != 'K':
             print("Błąd, podaj płeć ponownie")
 
-    while not exitWhile:
-        userVar = input("Podaj liczbę: ")
-        wiek, exitWhile = helpers.userVariableINT(userVar)
+    wiek = helpers.userVariableIntNEW("Podaj liczbę: ")
 
     print("Twoje imię", imie, "wiek", wiek, "plec", plec)
 
@@ -34,6 +31,5 @@ while not exitWhile:
             print("ZUS")
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

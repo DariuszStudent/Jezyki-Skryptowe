@@ -7,13 +7,10 @@ import time
 user = 0
 computer = 0
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Losowanie, wpisz [o] lub [r] (orzeł lub reszka), lub "
-                        "wpisz [q] aby wyjść z programu: ").lower()
-        userInput, exitWhile = helpers.userVariableROQ(userVar)
+    userInput = helpers.userVariableROQ("Losowanie, wpisz [o] lub [r] (orzeł lub reszka), lub "
+                        "wpisz [q] aby wyjść z programu: ")
 
     los = rnd.choice(["o", "r"])
     for i in range(0, 3):
@@ -35,6 +32,5 @@ while not exitWhile:
           "Komputer   = {}".format(user, computer))
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

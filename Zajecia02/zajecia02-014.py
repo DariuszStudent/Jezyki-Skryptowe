@@ -2,16 +2,11 @@
 # M2Z14
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj pierwszą liczbę ciągu n+1 która go otwiera: ")
-        userNumber1, exitWhile = helpers.userVariableINT(userVar)
-    exitWhile = False
-    while not exitWhile:
-        userVar = input("Podaj drugą liczbę ciągu n+1 która go zamyka: ")
-        userNumber2, exitWhile = helpers.userVariableINT(userVar)
+    userNumber1 = helpers.userVariableIntNEW("Podaj pierwszą liczbę ciągu n+1 która go otwiera: ")
+    userNumber2 = helpers.userVariableIntNEW("Podaj drugą liczbę ciągu n+1 która go zamyka: ")
+
     if userNumber1 > userNumber2:
         print("Podane wartości są błędne, pierwsza liczba musi być większa od drugiej liczby.")
         helpers.exitProgram()
@@ -28,6 +23,5 @@ while not exitWhile:
             print("Liczba {} jest podzielna przez 7".format(i))
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

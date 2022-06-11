@@ -16,12 +16,9 @@ def drawFlag(variable):
     t.left(90)
 
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj ilość chorągiewiek: ")
-        numberFlags, exitWhile = helpers.userVariableINT(userVar)
+    numberFlags = helpers.userVariableIntNEW("Podaj ilość chorągiewiek: ")
     arroundFlags = 360 / numberFlags
 
     for i in range(0, numberFlags):
@@ -30,6 +27,5 @@ while not exitWhile:
     t.Screen().exitonclick()
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

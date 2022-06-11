@@ -7,48 +7,64 @@ def exitProgram():
         quit()
 
 
-def userVariableINT(userInput):
-    try:
-        user = int(userInput)
-        return user, True
-    except Exception as e:
-        print("Typ błędu: ", e)
-        exitProgram()
-        return False, False
-
-
-def userVariableZeroOne(userInput):
-    for i in userInput:
-        if i == "0" or i == "1":
-            continue
-        else:
-            print("Liczba binarna to ciąg jedynek i zer, jeśli będziesz kontynuował,"
-                  "możesz spróbować jeszcze raz. ;)")
+def userVariableINT(userVar):
+    while True:
+        try:
+            user = int(userVar)
+            return user
+        except Exception as e:
+            print("Typ błędu: ", e)
             exitProgram()
-            return False, False
-    return userInput, True
+
+def userVariableIntNEW(textForUser):
+    while True:
+        userVar = input("{}".format(textForUser))
+        try:
+            user = int(userVar)
+            return user
+        except Exception as e:
+            print("Typ błędu: ", e)
+            exitProgram()
 
 
-def userVariableFloat(userInput):
-    try:
-        user = float(userInput)
-        return user, True
-    except Exception as e:
-        print("Typ błędu: ", e)
-        exitProgram()
-        return False, False
+def userVariableZeroOne(textForUser):
+    exit = True
+    while exit:
+        userInput = input("{}".format(textForUser))
+        for i in userInput:
+            if i != "0" and i != "1":
+                print("Liczba binarna to ciąg jedynek i zer, jeśli będziesz kontynuował,"
+                    "możesz spróbować jeszcze raz. ;)")
+                exit = True
+                break
+            else:
+                exit = False
+    return userInput
 
 
-def userVariableROQ(userInput):
-    userVar = userInput[0]
-    if userVar == "o" or userVar == "r":
-        return userVar, True
-    elif userVar == "q":
-        quit()
-    else:
-        print("Zostały podane złe dane")
-        exitProgram()
-        return False, False
+def userVariableFloatNew(textForUser):
+    while True:
+        userVar = input("{}".format(textForUser))
+        try:
+            user = float(userVar)
+            return user
+        except Exception as e:
+            print("Typ błędu: ", e)
+            exitProgram()
+
+
+def userVariableROQ(textForUser):
+    while True:
+        userInput = input("{}".format(textForUser))
+        userVar = userInput[0]
+        if userVar == "o" or userVar == "r":
+            return userVar
+            break
+        elif userVar == "q":
+            quit()
+        else:
+            print("Zostały podane złe dane")
+            exitProgram()
 
 
 def turtleXY(lenght):

@@ -1,15 +1,11 @@
 # =============================================
 # M2Z13
-
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     number = 0
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj liczbę binarną: ")
-        userNumber, exitWhile = helpers.userVariableZeroOne(userVar)
+    userNumber = helpers.userVariableZeroOne("Podaj liczbę binarną: ")
 
     cyfra = len(userNumber) - 1
     for i in userNumber:
@@ -19,6 +15,5 @@ while not exitWhile:
     print(number)
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

@@ -3,13 +3,11 @@
 import Helpers as helpers
 
 sto = 100
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
     print("Podaj swój wiek, program sprawdzi ile brakuje ci do 100 lat i czy jesteś pełnoletni")
-    while not exitWhile:
-        userVar = input("Podaj liczbę: ")
-        userNumber, exitWhile = helpers.userVariableINT(userVar)
+
+    userNumber = helpers.userVariableIntNEW("Podaj liczbę: ")
 
     missingYears = sto - userNumber
     if missingYears > 0:
@@ -24,6 +22,5 @@ while not exitWhile:
         print("MŁODOCIANY")
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

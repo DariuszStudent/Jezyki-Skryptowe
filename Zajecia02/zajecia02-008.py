@@ -1,14 +1,11 @@
 # =============================================
 # M2Z08
-
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj liczbę naturalną nie większą niż 128, wyświętlę ją jako wartość binarna: ")
-        liczba, exitWhile = helpers.userVariableINT(userVar)
+    liczba = helpers.userVariableINT("Podaj liczbę naturalną nie większą niż 128, wyświętlę ją jako wartość binarna: ")
+
     if liczba > 128 or liczba < 1:
         print("Podana liczba nie jest z zadanego przedziału")
         helpers.exitProgram()
@@ -26,6 +23,5 @@ while not exitWhile:
     print()
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

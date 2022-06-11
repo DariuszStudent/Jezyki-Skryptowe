@@ -1,20 +1,12 @@
 # =============================================
 # M2Z10
-
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userWzrost = input("Podaj proszę swój wzrost w cm: ")
-        wzrost, exitWhile = helpers.userVariableFloat(userWzrost)
-        if exitWhile:
-            exitWhile = False
-            break
-    while not exitWhile:
-        userWaga = input("Podaj proszę swoją wagę w kg: ")
-        waga, exitWhile = helpers.userVariableFloat(userWaga)
+
+    wzrost = helpers.userVariableFloatNew("Podaj proszę swój wzrost w cm: ")
+    waga = helpers.userVariableFloatNew("Podaj proszę swoją wagę w kg: ")
 
     bmi = waga / ((wzrost / 100) ** 2)
     print(round(bmi, 2))
@@ -32,6 +24,5 @@ while not exitWhile:
         print("OJ!")
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

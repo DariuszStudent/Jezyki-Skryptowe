@@ -2,13 +2,10 @@
 # M2Z12
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     number = ""
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj liczbę, program przetworzy jej wartość z dziesiętnych na binarny: ")
-        userNumber, exitWhile = helpers.userVariableINT(userVar)
+    userNumber = helpers.userVariableIntNEW("Podaj liczbę, program przetworzy jej wartość z dziesiętnych na binarny: ")
 
     while userNumber != 0:
         r = userNumber % 2
@@ -18,6 +15,5 @@ while not exitWhile:
     print(number)
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

@@ -3,20 +3,11 @@
 import turtle as t
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj promień okręgów: ")
-        radius, exitWhile = helpers.userVariableINT(userVar)
-    exitWhile = False
-    while not exitWhile:
-        userVar = input("Podaj ilość okręgów: ")
-        numberCircles, exitWhile = helpers.userVariableINT(userVar)
-    exitWhile = False
-    while not exitWhile:
-        userVar = input("Podaj odstęp między okręgami: ")
-        spaceBetween, exitWhile = helpers.userVariableINT(userVar)
+    radius = helpers.userVariableIntNEW("Podaj promień okręgów: ")
+    numberCircles = helpers.userVariableIntNEW("Podaj ilość okręgów: ")
+    spaceBetween = helpers.userVariableIntNEW("Podaj odstęp między okręgami: ")
 
     t.speed(1000)
     t.penup()
@@ -31,6 +22,5 @@ while not exitWhile:
     t.Screen().exitonclick()
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

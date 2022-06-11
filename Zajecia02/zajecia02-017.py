@@ -23,20 +23,14 @@ def isprimeMath(num):
     return num > 1
 
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj początek przedziału: ")
-        intervalFirst, exitWhile = helpers.userVariableINT(userVar)
-    exitWhile = False
-    while not exitWhile:
-        userVar = input("Podaj koniec przedziału: ")
-        intervalLast, exitWhile = helpers.userVariableINT(userVar)
+    intervalFirst = helpers.userVariableIntNEW("Podaj początek przedziału: ")
+    intervalLast = helpers.userVariableIntNEW("Podaj koniec przedziału: ")
+
     if intervalFirst > intervalLast:
         print("Podane wartości są błędne, pierwsza liczba musi mniejsza od drugiej liczby.")
         helpers.exitProgram()
-        exitWhile = False
         continue
 
     randomNumber = rnd.randrange(intervalFirst, intervalLast + 1)
@@ -58,6 +52,5 @@ while not exitWhile:
     print(end3 - start3)
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================

@@ -2,12 +2,10 @@
 # M2Z04
 import Helpers as helpers
 
-exitWhile = False
-while not exitWhile:
+while True:
     print("################################################################################\n")
-    while not exitWhile:
-        userVar = input("Podaj licznik: ")
-        licznik, exitWhile = helpers.userVariableINT(userVar)
+
+    licznik = helpers.userVariableIntNEW("Podaj licznik: ")
     if licznik <= 0:
         print("Możesz zakończyć program.")
     while licznik > 0:
@@ -20,6 +18,5 @@ while not exitWhile:
         print("Koniec ciała pętli")
 
     helpers.exitProgram()
-    exitWhile = False
 
 # =============================================
