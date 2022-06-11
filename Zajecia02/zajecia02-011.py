@@ -6,7 +6,7 @@ znak = ' . '
 while True:
     print("################################################################################\n")
 
-    ilosc = helpers.userVariableIntNEW("Podaj dlugosc macierzy kwadratowej <int>x<int>: ")
+    ilosc = helpers.userVariableINTstring("Podaj dlugosc macierzy kwadratowej <int>x<int>: ")
     userInput = input("Podaj znak, który chcesz użyć jako przekątna "
                         "(program przechwyci tylko pierwszy znak): ")
     znakUser = userInput[0]

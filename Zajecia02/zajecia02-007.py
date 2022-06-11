@@ -4,7 +4,7 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    ile = helpers.userVariableINT("Podaj wysokość: ")
+    ile = helpers.userVariableINTstring("Podaj wysokość: ")
 
     for i in range(0, ile):
         for j in range(0, ile - i - 1):

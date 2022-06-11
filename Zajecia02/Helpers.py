@@ -7,7 +7,7 @@ def exitProgram():
         quit()
 
 
-def userVariableINT(userVar):
+def userVariableINTvariable(userVar):
     while True:
         try:
             user = int(userVar)
@@ -16,7 +16,8 @@ def userVariableINT(userVar):
             print("Typ błędu: ", e)
             exitProgram()
 
-def userVariableIntNEW(textForUser):
+
+def userVariableINTstring(textForUser):
     while True:
         userVar = input("{}".format(textForUser))
         try:
@@ -42,9 +43,18 @@ def userVariableZeroOne(textForUser):
     return userInput
 
 
-def userVariableFloatNew(textForUser):
+def userVariableFloatString(textForUser):
     while True:
         userVar = input("{}".format(textForUser))
+        try:
+            user = float(userVar)
+            return user
+        except Exception as e:
+            print("Typ błędu: ", e)
+            exitProgram()
+
+def userVariableFloatvariable(userVar):
+    while True:
         try:
             user = float(userVar)
             return user

@@ -5,9 +5,9 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    radius = helpers.userVariableIntNEW("Podaj promień okręgów: ")
-    numberCircles = helpers.userVariableIntNEW("Podaj ilość okręgów: ")
-    spaceBetween = helpers.userVariableIntNEW("Podaj odstęp między okręgami: ")
+    radius = helpers.userVariableINTstring("Podaj promień okręgów: ")
+    numberCircles = helpers.userVariableINTstring("Podaj ilość okręgów: ")
+    spaceBetween = helpers.userVariableINTstring("Podaj odstęp między okręgami: ")
 
     t.speed(1000)
     t.penup()

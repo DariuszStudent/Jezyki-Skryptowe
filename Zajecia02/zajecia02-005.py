@@ -13,7 +13,7 @@ while True:
 
     while e != 0:
         print("Licznik: ", licznik)
-        e = helpers.userVariableINT("Podaj element nr: ")
+        e = helpers.userVariableINTstring("Podaj element nr: ")
         if e == 0:
             licznik -= 1
             if licznik == 0:

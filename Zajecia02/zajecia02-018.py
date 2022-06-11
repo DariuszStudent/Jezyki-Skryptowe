@@ -8,7 +8,7 @@ computer = 0
 
 while True:
     print("################################################################################\n")
-    userInput = helpers.userVariableIntNEW("Określ ilość rzutów kostką, wpisz liczbę: ")
+    userInput = helpers.userVariableINTstring("Określ ilość rzutów kostką, wpisz liczbę: ")
     oczek1 = oczek2 = oczek3 = oczek4 = oczek5 = oczek6 = 0
 
     for i in range(1, userInput + 1):

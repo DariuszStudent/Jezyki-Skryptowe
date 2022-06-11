@@ -7,7 +7,7 @@ while True:
     print("################################################################################\n")
     print("Podaj swój wiek, program sprawdzi ile brakuje ci do 100 lat i czy jesteś pełnoletni")
 
-    userNumber = helpers.userVariableIntNEW("Podaj liczbę: ")
+    userNumber = helpers.userVariableINTstring("Podaj liczbę: ")
 
     missingYears = sto - userNumber
     if missingYears > 0:

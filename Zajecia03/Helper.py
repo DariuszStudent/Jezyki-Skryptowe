@@ -7,7 +7,7 @@ def exitProgram():
         quit()
 
 
-def userVariableINT(textForUser):
+def userVariableINTnumber(textForUser):
     while True:
         userVar = input("{}".format(textForUser))
         try:
@@ -27,6 +27,6 @@ def randomList(rangeUser):
 
 def userAddElementToList(rangeUser, lista):
     for i in range(0, rangeUser):
-        element = userVariableINT("Podaj wartość elementu: ")
+        element = userVariableINTnumber("Podaj wartość elementu: ")
         lista.append(element)
     return lista

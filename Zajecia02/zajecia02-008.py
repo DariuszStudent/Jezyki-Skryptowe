@@ -4,7 +4,7 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    liczba = helpers.userVariableINT("Podaj liczbę naturalną nie większą niż 128, wyświętlę ją jako wartość binarna: ")
+    liczba = helpers.userVariableINTstring("Podaj liczbę naturalną nie większą niż 128, wyświętlę ją jako wartość binarna: ")
 
     if liczba > 128 or liczba < 1:
         print("Podana liczba nie jest z zadanego przedziału")

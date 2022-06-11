@@ -5,8 +5,8 @@ import Helpers as helpers
 while True:
     print("################################################################################\n")
 
-    wzrost = helpers.userVariableFloatNew("Podaj proszę swój wzrost w cm: ")
-    waga = helpers.userVariableFloatNew("Podaj proszę swoją wagę w kg: ")
+    wzrost = helpers.userVariableFloatString("Podaj proszę swój wzrost w cm: ")
+    waga = helpers.userVariableFloatString("Podaj proszę swoją wagę w kg: ")
 
     bmi = waga / ((wzrost / 100) ** 2)
     print(round(bmi, 2))

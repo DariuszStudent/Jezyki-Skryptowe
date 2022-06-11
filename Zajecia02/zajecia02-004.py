@@ -5,7 +5,7 @@ import Helpers as helpers
 while True:
     print("################################################################################\n")
 
-    licznik = helpers.userVariableIntNEW("Podaj licznik: ")
+    licznik = helpers.userVariableINTstring("Podaj licznik: ")
     if licznik <= 0:
         print("Możesz zakończyć program.")
     while licznik > 0:

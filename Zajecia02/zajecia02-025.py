@@ -5,11 +5,11 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    numberSides = helpers.userVariableIntNEW("Podaj ilość boków: ")
+    numberSides = helpers.userVariableINTstring("Podaj ilość boków: ")
     if numberSides <= 2:
         print("Musisz podać co najmniej 3 boki ;)")
         continue
-    lenghtSides = helpers.userVariableIntNEW("Podaj długość boku: ")
+    lenghtSides = helpers.userVariableINTstring("Podaj długość boku: ")
     while True:
         if lenghtSides < 1:
             print("Musisz podaj co najmniej wartość 1")

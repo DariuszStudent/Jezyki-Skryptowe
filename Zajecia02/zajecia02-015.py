@@ -5,8 +5,8 @@ import random as rnd
 
 while True:
     print("################################################################################\n")
-    intervalFirst = helpers.userVariableIntNEW("Podaj początek przedziału, musi być dodatnia: ")
-    intervalLast = helpers.userVariableIntNEW("Podaj koniec przedziału: ")
+    intervalFirst = helpers.userVariableINTstring("Podaj początek przedziału, musi być dodatnia: ")
+    intervalLast = helpers.userVariableINTstring("Podaj koniec przedziału: ")
 
     if intervalFirst > intervalLast or intervalFirst < 0:
         print("Podane wartości są błędne, pierwsza liczba musi być dodatnia i mniejsza od drugiej liczby.")
@@ -19,7 +19,7 @@ while True:
 
     while userNumber != pseudoNumber:
         print("Podany zakres to: <{} : {}>".format(intervalFirst, intervalLast))
-        userNumber = helpers.userVariableIntNEW("Zgadnij Liczbę: ")
+        userNumber = helpers.userVariableINTstring("Zgadnij Liczbę: ")
         if userNumber < intervalFirst or userNumber > intervalLast:
             print("Liczba jest z poza zakresu, spróbuj jeszcze raz")
             continue

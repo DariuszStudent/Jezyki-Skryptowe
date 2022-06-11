@@ -11,9 +11,9 @@ while True:
             print(e)
             helpers.exitProgram()
             continue
-        userNumber1 = helpers.userVariableFloat(userVar1)
-        userNumber2 = helpers.userVariableFloat(userVar2)
-        userNumber3 = helpers.userVariableFloat(userVar3)
+        userNumber1 = helpers.userVariableFloatvariable(userVar1)
+        userNumber2 = helpers.userVariableFloatvariable(userVar2)
+        userNumber3 = helpers.userVariableFloatvariable(userVar3)
         if type(userNumber1) == float and type(userNumber2) == float and type(userNumber3) == float:
             break
 

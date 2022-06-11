@@ -15,7 +15,7 @@ while True:
         if plec != 'M' and plec != 'K':
             print("Błąd, podaj płeć ponownie")
 
-    wiek = helpers.userVariableIntNEW("Podaj liczbę: ")
+    wiek = helpers.userVariableINTstring("Podaj liczbę: ")
 
     print("Twoje imię", imie, "wiek", wiek, "plec", plec)
 

@@ -7,7 +7,7 @@ while True:
     print("################################################################################\n")
     print("Jeśli liczba jest większa od zera program wyświetli TAK, jeśli nie wyświetli NIE")
 
-    userNumber = helpers.userVariableIntNEW("Podaj liczbę: ")
+    userNumber = helpers.userVariableINTstring("Podaj liczbę: ")
 
     if userNumber == 0:
         print("Podana liczba jest równa 0")

@@ -15,10 +15,11 @@ def drawFlag(variable):
         t.forward(30)
     t.left(90)
 
+t.speed(200)
 
 while True:
     print("################################################################################\n")
-    numberFlags = helpers.userVariableIntNEW("Podaj ilość chorągiewiek: ")
+    numberFlags = helpers.userVariableINTstring("Podaj ilość chorągiewiek: ")
     arroundFlags = 360 / numberFlags
 
     for i in range(0, numberFlags):

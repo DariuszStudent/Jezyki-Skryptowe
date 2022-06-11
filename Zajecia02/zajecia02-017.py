@@ -25,8 +25,8 @@ def isprimeMath(num):
 
 while True:
     print("################################################################################\n")
-    intervalFirst = helpers.userVariableIntNEW("Podaj początek przedziału: ")
-    intervalLast = helpers.userVariableIntNEW("Podaj koniec przedziału: ")
+    intervalFirst = helpers.userVariableINTstring("Podaj początek przedziału: ")
+    intervalLast = helpers.userVariableINTstring("Podaj koniec przedziału: ")
 
     if intervalFirst > intervalLast:
         print("Podane wartości są błędne, pierwsza liczba musi mniejsza od drugiej liczby.")

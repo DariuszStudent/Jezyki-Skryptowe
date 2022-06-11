@@ -4,7 +4,7 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    ile = helpers.userVariableINT("Ilosc znakow: ")
+    ile = helpers.userVariableINTstring("Ilosc znakow: ")
 
     for i in range(1, ile+1):
         for j in range(0, i):

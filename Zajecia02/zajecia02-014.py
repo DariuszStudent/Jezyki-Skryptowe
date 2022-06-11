@@ -4,13 +4,12 @@ import Helpers as helpers
 
 while True:
     print("################################################################################\n")
-    userNumber1 = helpers.userVariableIntNEW("Podaj pierwszą liczbę ciągu n+1 która go otwiera: ")
-    userNumber2 = helpers.userVariableIntNEW("Podaj drugą liczbę ciągu n+1 która go zamyka: ")
+    userNumber1 = helpers.userVariableINTstring("Podaj pierwszą liczbę ciągu n+1 która go otwiera: ")
+    userNumber2 = helpers.userVariableINTstring("Podaj drugą liczbę ciągu n+1 która go zamyka: ")
 
     if userNumber1 > userNumber2:
         print("Podane wartości są błędne, pierwsza liczba musi być większa od drugiej liczby.")
         helpers.exitProgram()
-        exitWhile = False
         continue
 
     print("podany ciąg to: <{} : {}>".format(userNumber1, userNumber2))

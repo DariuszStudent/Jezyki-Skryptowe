@@ -5,7 +5,7 @@ import Helpers as helpers
 while True:
     number = ""
     print("################################################################################\n")
-    userNumber = helpers.userVariableIntNEW("Podaj liczbę, program przetworzy jej wartość z dziesiętnych na binarny: ")
+    userNumber = helpers.userVariableINTstring("Podaj liczbę, program przetworzy jej wartość z dziesiętnych na binarny: ")
 
     while userNumber != 0:
         r = userNumber % 2
