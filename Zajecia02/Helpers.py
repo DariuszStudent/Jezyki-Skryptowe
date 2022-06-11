@@ -8,13 +8,12 @@ def exitProgram():
 
 
 def userVariableINTvariable(userVar):
-    while True:
-        try:
-            user = int(userVar)
-            return user
-        except Exception as e:
-            print("Typ błędu: ", e)
-            exitProgram()
+    try:
+        user = int(userVar)
+        return user
+    except Exception as e:
+        print("Typ błędu: ", e)
+        exitProgram()
 
 
 def userVariableINTstring(textForUser):
@@ -54,13 +53,12 @@ def userVariableFloatString(textForUser):
             exitProgram()
 
 def userVariableFloatvariable(userVar):
-    while True:
-        try:
-            user = float(userVar)
-            return user
-        except Exception as e:
-            print("Typ błędu: ", e)
-            exitProgram()
+    try:
+        user = float(userVar)
+        return user
+    except Exception as e:
+        print("Typ błędu: ", e)
+        exitProgram()
 
 
 def userVariableROQ(textForUser):

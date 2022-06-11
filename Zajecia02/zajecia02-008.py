@@ -9,7 +9,6 @@ while True:
     if liczba > 128 or liczba < 1:
         print("Podana liczba nie jest z zadanego przedziału")
         helpers.exitProgram()
-        exitWhile = False
         continue
 
     i = 128
