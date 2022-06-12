@@ -1,18 +1,13 @@
 # =============================================
-# M4Z00c
-
+# M4Z00e
 import Helper as helper
+import turtle as t
 
 
-def swap(a, b):
-    return b, a
+def
 
 
 def main(args):
-    a = helper.userVariableINTstring("Podaj a: ")
-    b = helper.userVariableINTstring("Podaj b: ")
-    wynik = swap(a, b)
-    print(wynik)
 
 
 if __name__ == '__main__':
