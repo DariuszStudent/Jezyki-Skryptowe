@@ -1,18 +1,17 @@
 # =============================================
 # M4Z08
-import Helper as helper
+import math
+
+def ile_cyfr(l):
+    if l <= 999999999999997:
+        return int(math.log10(l)) + 1
+    licznik = 15
+    while l >= 10 ** licznik:
+        licznik += 1
+    return licznik
 
 
-def main(args):
-    while True:
-        print("################################################################################\n")
-
-        helper.exitProgram()
-
-
-if __name__ == '__main__':
-    import sys
-
-    sys.exit(main(sys.argv))
+liczba = int(input("Podaj dowolną liczbę:"))
+print("Liczba cyfr:", ile_cyfr(liczba))
 
 # =============================================
