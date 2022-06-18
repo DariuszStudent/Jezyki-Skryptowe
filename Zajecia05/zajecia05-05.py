@@ -1,18 +1,11 @@
 # =============================================
 # M5Z05
-import Helper as helper
+sekundy = int(input("Podaj ilość sekund do obliczeń: "))
 
+MM, SS = divmod(sekundy, 60)
+GG, MM= divmod(MM, 60)
 
-def main(args):
-    while True:
-        print("################################################################################\n")
-
-        helper.exitProgram()
-
-
-if __name__ == '__main__':
-    import sys
-
-    sys.exit(main(sys.argv))
+print('gdzin:', GG, ', minut:', MM, ', sekund:', SS,)
+print('Czas: ',GG,MM,SS,sep=':')
 
 # =============================================
