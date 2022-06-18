@@ -1,18 +1,9 @@
 # =============================================
 # M5Z07
-import Helper as helper
 
+import sys
 
-def main(args):
-    while True:
-        print("################################################################################\n")
-
-        helper.exitProgram()
-
-
-if __name__ == '__main__':
-    import sys
-
-    sys.exit(main(sys.argv))
+for arg in sys.argv:
+    print(arg)
 
 # =============================================
