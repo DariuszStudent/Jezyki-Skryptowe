@@ -1,18 +1,24 @@
 # =============================================
 # M5Z09
-import Helper as helper
+import string
+import random
+
+dlugosc = int(input("Podaj dlugosc hasla jakie chcesz wygenerowac : "))
+
+liczba = string.digits
+symbol = string.punctuation
+male = string.ascii_lowercase
+duze = string.ascii_uppercase
 
 
-def main(args):
-    while True:
-        print("################################################################################\n")
+suma = liczba + symbol + male + duze
 
-        helper.exitProgram()
+x = random.sample(suma,dlugosc)
+haslo = "".join(x)
 
 
-if __name__ == '__main__':
-    import sys
 
-    sys.exit(main(sys.argv))
+plik = open("Haslo1.txt","w+")
+plik.write(haslo)
 
 # =============================================
